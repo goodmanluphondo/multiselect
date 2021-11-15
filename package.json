@@ -1,0 +1,11 @@
+{
+  "name": "multiselect",
+  "version": "1.0.0",
+  "description": "A simple multi select component with an option to display selected options.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Goodman Luphondo",
+  "license": "ISC"
+}
