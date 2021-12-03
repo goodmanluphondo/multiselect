@@ -1,11 +1,28 @@
 {
-  "name": "multiselect",
-  "version": "1.0.0",
-  "description": "A simple multi select component with an option to display selected options.",
-  "main": "index.js",
+  "private": false,
+  "name": "vuejs-multiselect",
+  "version": "0.0.2",
+  "main": "dist/multiselect.umd.js",
+  "module": "dist/multiselect.esm.js",
+  "unpkg": "dist/multiselect.min.js",
+  "description": "A simple Vue.js multi select component that also displays selected options.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/multiselect.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/multiselect.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/multiselect.min.js"
   },
+  "devDependencies": {
+    "rollup": "^1.17.0",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "files": [
+    "src/*"
+  ],
   "author": "Goodman Luphondo",
-  "license": "ISC"
+  "license": "MIT"
 }
