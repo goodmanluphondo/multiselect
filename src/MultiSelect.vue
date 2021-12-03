@@ -10,8 +10,8 @@
                     </button>
                     <span v-html="selectedOption"></span>
                 </div>
+                <input type="text" class="input-control" @focus="showListbox">
             </div>
-            <input type="text" class="input-control" @focus="showListbox">
             <div class="container">
                 <div v-if="displayListbox" class="listbox">
                     <div v-for="(currentOption, index) in options" :key="index" :class="selectedOptions[currentOption[`${optionIndex}`]] ? 'listbox--item--selected' : 'listbox--item'" @click="selectOption(currentOption)">
